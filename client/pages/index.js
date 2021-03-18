@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import UnitForm from '../components/unitForm.js'
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>
-          Hello world
-        </div>
+        <UnitForm />
       </main>
 
       <footer>
