@@ -1,4 +1,4 @@
-const { request } = require('express')
+const { request, response } = require('express')
 
 const Pool = require('pg').Pool
 require('dotenv').config()
@@ -38,8 +38,31 @@ const createSoldier = (request, response) => {
     })
 }
 
+const updateSoldier = (request, response) => {
+    const id = parseInt(request.params.id)
+    const { name, health, mobility, aim, will, armour, dodge, hack, className } = request.body
+    pool.query('UPDATE soldiers SET name = $1, health = $2, mobility = $3, aim = $4, will = $5, armour = $6, dodge = $7, hack = $8 , classname = $9 WHERE id = $10 ', [name, health, mobility, aim, will, armour, dodge, hack, className, id], (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).send(`Added Successfully`)
+    })
+}
+
+const deleteSoldier = (request, response) => {
+    const id = parseInt(request.params.id)
+    pool.query('DELETE FROM soldiers WHERE id=$1', [id], (error, results) =>{
+        if (error) {
+            throw error
+        }
+        response.status(200).send('All deleted')
+    })
+}
+
 module.exports = {
     getSoldier,
     getSoldierById,
     createSoldier,
+    updateSoldier,
+    deleteSoldier
 }

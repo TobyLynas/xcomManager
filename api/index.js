@@ -17,6 +17,8 @@ app.get('/', (request, response) => {
 app.get('/users', db.getSoldier)
 app.get('/users/:id', db.getSoldierById)
 app.post('/users', db.createSoldier)
+app.put('/users/:id', db.updateSoldier)
+app.delete('/users/:id', db.deleteSoldier)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
