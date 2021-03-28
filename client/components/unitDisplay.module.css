@@ -1,0 +1,25 @@
+.componentPage{
+    width: 90%;
+    height: 100%;
+}
+.table{
+    background-color: rgba(29, 141, 245, 0.75);
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.datum{
+    text-align: center;
+    border: 1px solid black;
+}
+.title{
+    border: 2px solid black;
+    background-color: rgba(29, 141, 245, 1)
+}
+/* .gridContainer{ 
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap:10px;
+} */
