@@ -25,9 +25,9 @@ const UnitForm = () => {
             location.reload()
         }
     return (
-            <form /*action={sendData()}*/ onSubmit={postUnit} method="POST" className={styles.formMain}>
+            <form onSubmit={postUnit} method="POST" className={styles.formMain}>
                 <label htmlFor="unit">Name:
-                    <input className={styles.nameInput} id="soldierName" type="text" required/>
+                    <input className={styles.wideInput} id="soldierName" type="text" required/>
                 </label>
                 <label>Health
                     <input className={styles.input} type="number" id="health" required/>
@@ -51,7 +51,7 @@ const UnitForm = () => {
                     <input className={styles.input} type="number" id="hack" required/>
                 </label>
                 <label> ClassInput:
-                <select className={styles.classInput} id="class" required >
+                <select className={styles.wideInput} id="class" required >
                     <option>Assualt</option>
                     <option>Grenadier</option>
                     <option>Gunner</option>

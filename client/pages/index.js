@@ -12,8 +12,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <UnitForm />
-        <UnitDisplay />
+        <img className={styles.backImg} src='insigGlobe.png'/>
+        <UnitForm className={styles.index}/>
+        <UnitDisplay className={styles.index}/>
       </main>
 
       <footer>

@@ -4,25 +4,36 @@
     height: 100px;
     display: flex;
     justify-content: space-around;
+    z-index: 3;
 }
-
-.nameInput{
+.wideInput{
     display: flex;
-}
-
-.classInput{
-    display: flex;
+    background-color: rgba(0, 238, 255, 0.753);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    height: 30%;
+    text-align: center;
 }
 
 .input{
     width: 40%;
     display: flex;
+    background-color: rgba(0, 238, 255, 0.753);
     flex-shrink: 1;
+    border-radius: 13px;
+    border: 1px solid rgb(0, 0, 0);
+    height: 30%;
+    text-align: center;
 }
 
 .subButton{
     height: 50%;
     width: 10%;
+    background-color: rgba(0, 238, 255, 0.753);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    margin: 7px;
+    margin-left: 15px;
 }
 
 .displayArea{

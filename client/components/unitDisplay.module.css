@@ -1,17 +1,18 @@
 .componentPage{
     width: 90%;
     height: 100%;
+    z-index: 3;
 }
 .table{
-    background-color: rgba(29, 141, 245, 0.75);
-    border-radius: 5px;
     width: 100%;
-    border: 1px solid black;
     border-collapse: collapse;
 }
 .datum{
     text-align: center;
+    background-color: rgba(29, 141, 245, 0.75);
     border: 1px solid black;
+    border-radius: 2px;
+
 }
 .title{
     border: 2px solid black;
