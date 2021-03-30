@@ -15,12 +15,34 @@ const unitDisplayGrid = (props) => {
         getAPI()
      }, [] );
 
-
     const SoldierGrid = (props) => {
-        props.data.shift()
+        let shiftedId = props.data.shift()
         return <tr >
             {props.data.map((value, index) =>  {return <td className={styles.datum}>{value}</td>})}
+            <button className={styles.deleteButton} onClick={(event, id = shiftedId, name = props.data[0])=>{deleteButtonPress(event, id, name)}}>
+                <img className={styles.trashCan} src={'trash.svg'}/>
+            </button>
         </tr>
+    }
+    const deleteButtonPress = (event, id, name) => {
+        event.preventDefault();
+        let conf = confirm(`You are about to remove '${name}' from the database. Click OK to continue. This cannot be undone.`)
+        conf ? deleteCall(id) : {}
+    }
+    const deleteCall = async (id) => {
+        console.log(id)
+        const res = await fetch(`http://localhost:9000/users/${id}`,
+        {
+            body: JSON.stringify({
+                id: {id} 
+            }),
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            method: 'DELETE'
+          }
+          )
+          location.reload()
     }
     return(
         <div className={styles.componentPage} >
