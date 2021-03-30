@@ -17,14 +17,24 @@ const unitDisplayGrid = (props) => {
 
     const SoldierGrid = (props) => {
         let shiftedId = props.data.shift()
+        let colours=['white','black']
         return <tr >
             {props.data.map((value, index) =>  {return <td className={styles.datum}>{value}</td>})}
-            <button className={styles.deleteButton} onClick={(event, id = shiftedId, name = props.data[0])=>{deleteButtonPress(event, id, name)}}>
-                <img className={styles.trashCan} src={'trash.svg'}/>
+            <button className={styles.deleteButton} onClick={(event, id = shiftedId, name = props.data[0])=>{deleteButtonHandle(event, id, name)}}>
+                <svg className={styles.trashIcon} fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                </svg>
+            </button>
+            <button className={styles.pencilButton}>
+                <img onClick={(event,id=shiftedId)=>editButtonHandle(event,id)} className={styles.pencilIcon} src={'pencil-fill.svg'}/>
             </button>
         </tr>
     }
-    const deleteButtonPress = (event, id, name) => {
+    const editButtonHandle = (event, id) => {
+        console.log(id)
+    }
+
+    const deleteButtonHandle = (event, id, name) => {
         event.preventDefault();
         let conf = confirm(`You are about to remove '${name}' from the database. Click OK to continue. This cannot be undone.`)
         conf ? deleteCall(id) : {}
