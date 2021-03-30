@@ -12,9 +12,54 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <img className={styles.title} src={'title.png'}/>
+        <br/>
         <img className={styles.backImg} src='insigGlobe.png'/>
-        <UnitForm className={styles.index}/>
-        <UnitDisplay className={styles.index}/>
+        <UnitForm />
+        <UnitDisplay />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </main>
 
       <footer>

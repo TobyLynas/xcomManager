@@ -20,3 +20,6 @@ label{
   flex-direction: column;
   align-items: center;
 }
+button{
+  color: white
+}

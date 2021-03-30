@@ -5,20 +5,22 @@
     display: flex;
     justify-content: space-around;
     z-index: 3;
+    transform: translate(0, 30px);
 }
 .wideInput{
     display: flex;
-    background-color: rgba(0, 238, 255, 0.753);
+    background-color: #2222fa;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 15px;
     height: 30%;
     text-align: center;
+    color: #fff;
 }
 
 .input{
     width: 40%;
     display: flex;
-    background-color: rgba(0, 238, 255, 0.753);
+    background-color: #2222fa;
     flex-shrink: 1;
     border-radius: 13px;
     border: 1px solid rgb(0, 0, 0);
@@ -29,7 +31,7 @@
 .subButton{
     height: 50%;
     width: 10%;
-    background-color: rgba(0, 238, 255, 0.753);
+    background-color: #2222fa;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 15px;
     margin: 7px;

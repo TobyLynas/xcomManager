@@ -12,3 +12,9 @@
     z-index: 1;
     bottom: 20%;
 }
+.title{
+    width: 75%;
+    transform: translate(0, 50px);
+    top: 50px;
+
+}
