@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-around;
     z-index: 3;
-    transform: translate(0, 30px);
 }
 .wideInput{
     display: flex;
@@ -36,34 +35,4 @@
     border-radius: 15px;
     margin: 7px;
     margin-left: 15px;
-}
-
-.displayArea{
-    background-color: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.gridContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 80%;
-    height: 400px;
-    border: solid;
-}
-
-.gridChild{
-    grid-column: 0;
-    grid-row: 2;
-    border:solid 1px;
-}
-.gridChild1{
-    grid-column: 6;
-    grid-row: 1;
-}
-.gridChild2{
-    grid-column: 0;
-    grid-row: 3;
 }
