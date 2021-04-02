@@ -3,6 +3,6 @@
 
 
 to start api:
-node app.js
+node index.js
 
 For enviroment setup, follow the EXAMPLE.env file in /api.

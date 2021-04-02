@@ -1,0 +1,41 @@
+.modalMain {
+  position: fixed;
+  background: blue;
+  width: 80%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cancelButton {
+  background-color: blue;
+  border: 2px yellow dashed;
+  height: 20%;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+.wideInput{
+    color: black;
+}
+
+.title {
+}
+
+.input{
+    color: black;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.table{
+}
+
+.tableBody{
+}
