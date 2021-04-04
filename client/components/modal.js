@@ -1,31 +1,46 @@
 import React, { useEffect, useState } from "react";
 import styles from "../components/modal.module.css";
 
+
 const Modal = ({ handleClose, show, data }) => {
   const showHideClassName = show ? styles.displayBlock : styles.displayNone;
   const [statsState, setStatsState] = useState();
-  
-  const infoCall = async () => {
+
+  const infoCall = async (data, setStatsState) => {
     const response = await fetch(`http://localhost:9000/users/${data}`);
     const stats = await response.json();
     setStatsState(stats[0]);
   };
 
-  useEffect(()=>{
-      infoCall()
-  }, [])
+  useEffect(() => {
+    infoCall(data, setStatsState);
+  }, []);
+
+const handleEdit = async (data, event) => {
+    const res = await fetch(`http://localhost:9000/users/${data}`,
+    {
+        body: JSON.stringify({
+            name: event.target.soldierName.value,
+            health: event.target.health.value,
+            aim: event.target.aim.value,
+            mobility: event.target.mobility.value,
+            will: event.target.will.value,
+            armour: event.target.armour.value,
+            dodge: event.target.dodge.value,
+            hack: event.target.hack.value,
+            className: event.target.class.value
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        method: 'PUT'
+    })
+};
   return (
+      <form onSubmit={()=>handleEdit(data, event)}>
     <div className={showHideClassName}>
       {statsState && (
         <div className={styles.modalMain}>
-          <button
-            className={styles.cancelButton}
-            type="button"
-            onClick={handleClose}
-          >
-            {" "}
-            Cancel
-          </button>
           <table className={styles.table}>
             <tbody className={styles.tableBody}>
               <tr className={styles.rowOne}>
@@ -41,33 +56,91 @@ const Modal = ({ handleClose, show, data }) => {
               </tr>
               <tr>
                 <td>
-                  <input className={styles.wideInput} defaultValue={statsState.name} />
+                  <input
+                  id="soldierName"
+                    className={styles.wideInput}
+                    defaultValue={statsState.name}
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.health}type="number" />
+                  <input
+                  id="health"
+                    className={styles.input}
+                    defaultValue={statsState.health}
+                    type="number"
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.mobility}type="number" />
+                  <input
+                  id="mobility"
+                    className={styles.input}
+                    defaultValue={statsState.mobility}
+                    type="number"
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.aim}type="number" />
+                  <input
+                  id="aim"
+                    className={styles.input}
+                    defaultValue={statsState.aim}
+                    type="number"
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.will} type="number" />
+                  <input
+                  id="will"
+                    className={styles.input}
+                    defaultValue={statsState.will}
+                    type="number"
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.armour} type="number" />
+                  <input
+                  id="armour"
+                    className={styles.input}
+                    defaultValue={statsState.armour}
+                    type="number"
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.dodge} type="number" />
+                  <input
+                  id="dodge"
+                    className={styles.input}
+                    defaultValue={statsState.dodge}
+                    type="number"
+                  />
                 </td>
                 <td>
-                  <input className={styles.input} defaultValue={statsState.hack} type="number" />
+                  <input
+                  id="hack"
+                    className={styles.input}
+                    defaultValue={statsState.hack}
+                    type="number"
+                  />
                 </td>
                 <td>
-                    <select>
-                        <option>Assualt</option>
-                    </select>
+                  <select id="class">
+                    <option>Assualt</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button
+                    className={styles.cancelButton}
+                    type="button"
+                    onClick={handleClose}
+                  >
+                    Cancel
+                  </button>
+                </td>
+                <td>
+                  <button
+                    className={styles.submitButton}
+                    type="submit"
+                  >
+                    Submit
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -75,6 +148,7 @@ const Modal = ({ handleClose, show, data }) => {
         </div>
       )}
     </div>
+    </form>
   );
 };
 

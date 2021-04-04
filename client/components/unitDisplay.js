@@ -1,6 +1,5 @@
 import styles from "../components/unitDisplay.module.css";
 import React, { useState, useEffect } from "react";
-import Modal from "../components/modal.js";
 import DeleteComponent from "./delete";
 import EditComponent from "./edit";
 
