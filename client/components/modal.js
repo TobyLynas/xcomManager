@@ -39,6 +39,7 @@ const Modal = ({ handleClose, show, data }) => {
       <div className={showHideClassName}>
         {statsState && (
           <div className={styles.modalMain}>
+            <div className={styles.entryText}>Enter your soldier details</div>
             <table className={styles.table}>
               <tbody className={styles.tableBody}>
                 <tr className={styles.rowOne}>
@@ -53,7 +54,7 @@ const Modal = ({ handleClose, show, data }) => {
                   <th className={styles.title}>Class</th>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles}>
                     <input
                       id="soldierName"
                       className={styles.wideInput}
@@ -116,7 +117,7 @@ const Modal = ({ handleClose, show, data }) => {
                       type="number"
                     />
                   </td>
-                  <td>
+                  <td className={styles.class}>
                     <select id="class">
                       <option>Assualt</option>
                       <option>Grenadier</option>

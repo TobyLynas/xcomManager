@@ -21,7 +21,6 @@ class editModule extends React.Component {
       <div>
         <img
           onClick={this.showModal}
-          // onClick={(event) => this.handleEditClick(event)}
           className={styles.pencilIcon}
           src={"pencil-fill.svg"}
         />
@@ -29,9 +28,7 @@ class editModule extends React.Component {
           show={this.state.show}
           handleClose={this.hideModal}
           data={this.props.id}
-        >
-          <p>Modal</p>
-        </Modal>
+        />
       </div>
     );
   }
