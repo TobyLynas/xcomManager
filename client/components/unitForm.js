@@ -33,7 +33,12 @@ const UnitForm = () => {
         }}
       >
         Add Soldier
-        <img className={accordionState===true?styles.chevronShow:styles.chevronHide} src='/chevron-right.svg'/>
+        <img
+          className={
+            accordionState === true ? styles.chevronShow : styles.chevronHide
+          }
+          src="/chevron-right.svg"
+        />
       </button>
       <div
         className={
@@ -129,8 +134,8 @@ const UnitForm = () => {
               <option>Psi Operative</option>
             </select>
           </label>
-          <button  className={styles.subButton} type="submit">
-              Submit
+          <button className={styles.subButton} type="submit">
+            Submit
           </button>
         </form>
       </div>
