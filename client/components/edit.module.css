@@ -5,3 +5,9 @@
 .pencilIcon{
     transition: 0.2s;
 }
+.centerAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

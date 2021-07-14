@@ -18,7 +18,7 @@ class editModule extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.centerAlign}>
         <img
           onClick={this.showModal}
           className={styles.pencilIcon}

@@ -27,7 +27,7 @@ class UnitDisplay extends React.Component {
             </td>
           );
         })}
-        <td>
+        <td className={props.delete}>
           <DeleteComponent id={shiftedId} name={props.data[0]} />
         </td>
         <td>
