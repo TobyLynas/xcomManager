@@ -41,10 +41,7 @@ const UnitForm = () => {
         />
       </button>
       <div
-        className={
-          accordionState === true ? styles.accordionHide : styles.accordionShow
-        }
-      >
+        className={accordionState === true ? styles.accordionHide : styles.accordionShow}>
         <form
           onSubmit={postUnit}
           method="POST"

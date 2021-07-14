@@ -13,7 +13,6 @@
   font-size: 24pt;
   text-emphasis: bold;
   font-family: "Rubik", sans-serif;
-  border-bottom: 4px solid #89dcff;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
@@ -28,19 +27,32 @@
   transform: scale(2) rotate(90deg);
   transition: transform 300ms ease;
 }
+.accordionShow {
+  height: 200px;
+  transition: height 3000ms ease;
+  border: 4px solid #89dcff;
+  overflow: hidden;
+}
+.accordionHide {
+  height: 0;
+  transition: height 3000ms ease;
+  border: 4px solid #89dcff;
+  overflow: hidden;
+}
 .formMain {
   width: 90%;
+  height: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto auto auto;
   margin: 5px;
-  transition: height 300ms ease;
+  overflow: hidden;
+  transition: height 300ms ease-out;
 }
 .formMainHide{
   height: 0;
   overflow: hidden;
-  transition: height 300ms ease;
-  padding: 0;
+  transition: height 300ms ease-out;
 }
 .entryText {
   grid-column: 1 / 6;
@@ -90,15 +102,4 @@
 }
 
 
-.accordionShow {
-  height: 180px;
-  transition: height 300ms ease;
-  border: 4px solid rgb(24,39,36);
-  padding: 5px;
-}
-.accordionHide {
-  height: 0;
-  overflow: hidden;
-  transition: height 300ms ease;
-  padding: 0;
-}
+
