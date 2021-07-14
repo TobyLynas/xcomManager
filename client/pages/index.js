@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Xcom Manager</title>
+        <link rel="icon" href="/xcom-insig.svg" />
       </Head>
 
       <main className={styles.main}>
         <img className={styles.title} src={'title.png'}/>
         <br/>
-        <img className={styles.backImg} src='insigGlobe.png'/>
+        <img className={styles.backImg} src='insig-globe.png'/>
         <UnitForm />
         <UnitDisplay />
 
