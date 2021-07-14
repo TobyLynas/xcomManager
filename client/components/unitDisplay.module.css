@@ -1,25 +1,33 @@
 .componentPage{
     width: 90%;
     height: 100%;
+    z-index: 3;
+    transform: translate(0,-50px
+    );
 }
 .table{
-    background-color: rgba(29, 141, 245, 0.75);
-    border-radius: 5px;
     width: 100%;
-    border: 1px solid black;
     border-collapse: collapse;
 }
 .datum{
     text-align: center;
+    background-color: rgba(29, 141, 245, 0.75);
     border: 1px solid black;
+    border-radius: 2px;
+
 }
 .title{
     border: 2px solid black;
     background-color: rgba(29, 141, 245, 1)
 }
-/* .gridContainer{ 
-    background-color: red;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap:10px;
-} */
+.deleteButton{
+    background-color: black;
+    border: none;
+    outline: none;
+}
+.modalParent{
+    color: red;
+    background-color: green;
+    width: 1000px;
+    height: 1000px;
+}

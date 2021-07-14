@@ -1,0 +1,51 @@
+.modalMain {
+  position: fixed;
+  background: #131313;
+  width: 80%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 15px #89DCFF solid;
+}
+.entryText{
+  margin: 10px;
+}
+.cancelButton {
+  background-color: blue;
+  border: 2px yellow dashed;
+  height: 20%;
+  position: absolute;
+  bottom: 10%;
+  left: 25%;
+}
+.submitButton {
+  background: green;
+  position: absolute;
+  height: 20%;
+  bottom: 10%;
+  right: 25%;
+}
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.wideInput {
+  color: black;
+}
+
+.input {
+  color: black;
+  width: 80%;
+  margin-left: 25%;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto ;
+  grid-template-rows: auto auto auto auto auto auto;
+}
