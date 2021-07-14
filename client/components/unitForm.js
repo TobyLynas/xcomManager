@@ -45,7 +45,13 @@ const UnitForm = () => {
           accordionState === true ? styles.accordionHide : styles.accordionShow
         }
       >
-        <form onSubmit={postUnit} method="POST" className={styles.formMain}>
+        <form
+          onSubmit={postUnit}
+          method="POST"
+          className={
+            accordionState === true ? styles.formMainHide : styles.formMain
+          }
+        >
           <div className={styles.entryText}>Enter your soldiers details</div>
           <label htmlFor="unit" className={styles.nameLabel}>
             Name:
