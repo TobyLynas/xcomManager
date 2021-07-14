@@ -23,7 +23,7 @@ const UnitForm = () => {
     });
     location.reload();
   };
-  let [accordionState, setAccordionState] = useState(false);
+  let [accordionState, setAccordionState] = useState(true);
   return (
     <div className={styles.component}>
       <button
@@ -41,13 +41,14 @@ const UnitForm = () => {
         />
       </button>
       <div
-        className={accordionState === true ? styles.accordionHide : styles.accordionShow}>
+        className={
+          accordionState === true ? styles.accordionHide : styles.accordionShow
+        }
+      >
         <form
           onSubmit={postUnit}
           method="POST"
-          className={
-            accordionState === true ? styles.formMainHide : styles.formMain
-          }
+          className={styles.formMain}
         >
           <div className={styles.entryText}>Enter your soldiers details</div>
           <label htmlFor="unit" className={styles.nameLabel}>
